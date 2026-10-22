@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CourseDesk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">CourseDesk</div>
+    <nav>
+      <button class="nav-item active" data-view="dashboard">Overview</button>
+      <button class="nav-item" data-view="courses">Course selection</button>
+      <button class="nav-item" data-view="timetable">Timetable</button>
+    </nav>
+    <div class="student-card">
+      <strong>楊莉思</strong>
+      <span>111210555</span>
+      <span>Computer Science</span>
+    </div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div>
+        <h1 id="page-title">Semester overview</h1>
+        <p>Academic year 115 · Fall semester</p>
+      </div>
+      <button id="reset-button" class="secondary">Reset demo data</button>
+    </header>
+
+    <section id="dashboard" class="view active">
+      <div class="summary-row">
+        <article><span>Enrolled courses</span><strong id="course-count">0</strong></article>
+        <article><span>Total credits</span><strong id="credit-count">0</strong></article>
+        <article><span>Credit limit</span><strong>25</strong></article>
+      </div>
+      <div class="panel">
+        <h2>Current enrollment</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Code</th><th>Course</th><th>Credits</th><th>Schedule</th></tr></thead>
+            <tbody id="enrolled-body"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="notice">
+        <h2>Notice</h2>
+        <p>This classroom demo stores course changes only in this browser. It does not connect to the official university system.</p>
+      </div>
+    </section>
+
+    <section id="courses" class="view">
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Search by course name or code">
+        <select id="day-filter" aria-label="Filter by day">
+          <option value="all">All days</option>
+          <option value="Monday">Monday</option>
+          <option value="Tuesday">Tuesday</option>
+          <option value="Wednesday">Wednesday</option>
+          <option value="Thursday">Thursday</option>
+          <option value="Friday">Friday</option>
+        </select>
+      </div>
+      <p id="message" class="message" role="status"></p>
+      <div id="course-list" class="course-list"></div>
+    </section>
+
+    <section id="timetable" class="view">
+      <div class="panel">
+        <h2>Weekly timetable</h2>
+        <div class="table-wrap">
+          <table class="schedule">
+            <thead><tr><th>Period</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th></tr></thead>
+            <tbody id="schedule-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
+

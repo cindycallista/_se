@@ -1,0 +1,90 @@
+:root {
+  color-scheme: light;
+  --bg: #f5f5f4;
+  --surface: #fafaf9;
+  --line: #d6d3d1;
+  --text: #1c1917;
+  --muted: #6b665f;
+  --green: #3f6212;
+  --green-light: #ecfccb;
+  --danger: #b91c1c;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 "Noto Sans TC", sans-serif; }
+button, input, select { font: inherit; }
+button { cursor: pointer; }
+
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 238px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  background: #1f2a1c;
+  color: #f7fee7;
+  border-right: 1px solid #31422a;
+}
+.brand { padding: 0 10px 24px; font-size: 20px; font-weight: 700; }
+nav { display: grid; gap: 4px; }
+.nav-item { border: 0; border-radius: 7px; padding: 10px 12px; color: #d9e5d2; background: transparent; text-align: left; }
+.nav-item:hover, .nav-item.active { color: white; background: #35452f; }
+.student-card { margin-top: auto; padding: 16px 10px 0; border-top: 1px solid #465540; display: grid; color: #bdcbb8; }
+.student-card strong { color: white; }
+.student-card span { font-size: 13px; }
+
+main { min-height: 100vh; margin-left: 238px; }
+.topbar { min-height: 92px; display: flex; align-items: center; justify-content: space-between; padding: 20px 30px; background: var(--surface); border-bottom: 1px solid var(--line); }
+h1, h2, p { margin-top: 0; }
+h1 { margin-bottom: 2px; font-size: 24px; }
+h2 { margin-bottom: 16px; font-size: 17px; }
+.topbar p { margin-bottom: 0; color: var(--muted); }
+.secondary { padding: 8px 12px; border: 1px solid var(--line); border-radius: 7px; background: white; }
+.secondary:hover { border-color: #9a958e; }
+
+.view { display: none; padding: 28px 30px; }
+.view.active { display: block; }
+.summary-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-bottom: 20px; }
+.summary-row article { display: grid; gap: 8px; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 9px; }
+.summary-row span { color: var(--muted); }
+.summary-row strong { font-size: 28px; }
+.panel, .notice { padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 9px; }
+.notice { margin-top: 20px; border-left: 4px solid var(--green); }
+.notice p { margin-bottom: 0; color: var(--muted); }
+
+.toolbar { display: flex; gap: 10px; margin-bottom: 8px; }
+.toolbar input { flex: 1; }
+input, select { min-height: 40px; padding: 8px 10px; border: 1px solid #aaa59e; border-radius: 7px; background: white; color: var(--text); }
+input:focus, select:focus { outline: 2px solid #84a852; outline-offset: 1px; }
+.message { min-height: 24px; margin: 0 0 8px; color: var(--green); }
+.message.error { color: var(--danger); }
+.course-list { display: grid; gap: 10px; }
+.course-row { display: grid; grid-template-columns: 1fr 160px 100px; align-items: center; gap: 18px; padding: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
+.course-row h3 { margin: 0 0 4px; font-size: 16px; }
+.course-row p { margin: 0; color: var(--muted); }
+.course-row button { padding: 8px 10px; border: 1px solid var(--green); border-radius: 7px; color: white; background: var(--green); }
+.course-row button.drop { color: var(--danger); background: white; border-color: #f0a2a2; }
+.course-meta { color: var(--muted); }
+
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 12px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+th { color: var(--muted); font-weight: 600; }
+tbody tr:last-child td { border-bottom: 0; }
+.schedule td { min-width: 120px; font-size: 13px; }
+.schedule td:first-child { min-width: 80px; font-weight: 700; }
+.slot { padding: 5px; background: var(--green-light); border-left: 3px solid var(--green); }
+
+@media (max-width: 760px) {
+  .sidebar { position: static; width: auto; padding: 14px; }
+  .brand { padding-bottom: 12px; }
+  nav { grid-template-columns: repeat(3, 1fr); }
+  .nav-item { text-align: center; }
+  .student-card { display: none; }
+  main { margin-left: 0; }
+  .topbar, .view { padding: 18px; }
+  .summary-row { grid-template-columns: 1fr; }
+  .course-row { grid-template-columns: 1fr; gap: 8px; }
+}
+
