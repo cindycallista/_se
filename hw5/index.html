@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenCode Session Notes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="../">← Homework index</a>
+    <span>楊莉思 · 111210555</span>
+  </header>
+  <main>
+    <h1>OpenCode Session Notes</h1>
+    <p class="lead">Choose the task first, then prepare a short prompt and a verification checklist.</p>
+    <section class="recommendations">
+      <h2>Class recommendations</h2>
+      <table>
+        <thead><tr><th>Task</th><th>Suggested model</th><th>Reasoning</th></tr></thead>
+        <tbody>
+          <tr><td>Programming</td><td>Muse Spark 1.3</td><td>Default</td></tr>
+          <tr><td>Writing</td><td>NVIDIA GLM 5.3 Flash</td><td>Low</td></tr>
+        </tbody>
+      </table>
+      <p class="notice">Free quota is limited and normally replenishes around 08:00 the next day.</p>
+    </section>
+    <section class="planner">
+      <h2>Session planner</h2>
+      <div class="fields">
+        <label>Task type<select id="task-type"><option value="code">Programming</option><option value="writing">Writing</option></select></label>
+        <label>Expected output<input id="output" value="A working feature with a short README"></label>
+        <label>Important constraint<input id="constraint" value="Keep the solution small and testable"></label>
+      </div>
+      <button id="build-plan">Build prompt</button>
+      <pre id="prompt-output"></pre>
+    </section>
+    <section class="checklist">
+      <h2>Before finishing</h2>
+      <label><input type="checkbox"> I inspected every changed file.</label>
+      <label><input type="checkbox"> I ran the available checks.</label>
+      <label><input type="checkbox"> I removed secrets and personal data.</label>
+      <label><input type="checkbox"> I can explain the final result.</label>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
