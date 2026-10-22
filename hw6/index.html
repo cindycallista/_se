@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StackBoard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="../">← Homework index</a>
+    <span>楊莉思 · 111210555</span>
+  </header>
+  <main>
+    <div class="title-row">
+      <div><h1>StackBoard</h1><p>Nginx, Flask, and PostgreSQL task service.</p></div>
+      <div id="mode">Checking service…</div>
+    </div>
+    <section class="architecture" aria-label="Service architecture">
+      <div><strong>Browser</strong><span>Port 8080</span></div><b>→</b>
+      <div><strong>Nginx</strong><span>Web + proxy</span></div><b>→</b>
+      <div><strong>Flask</strong><span>REST API</span></div><b>→</b>
+      <div><strong>PostgreSQL</strong><span>Persistent data</span></div>
+    </section>
+    <section class="board">
+      <div class="toolbar"><h2>Tasks</h2><span id="task-count"></span></div>
+      <form id="task-form">
+        <label>Task<input id="task-title" maxlength="100" placeholder="Add a service task" required></label>
+        <label>Category<select id="task-category"><option>Operations</option><option>Nginx</option><option>API</option><option>PostgreSQL</option></select></label>
+        <button>Add task</button>
+      </form>
+      <div id="message" role="status"></div>
+      <table>
+        <thead><tr><th>Status</th><th>Task</th><th>Category</th><th></th></tr></thead>
+        <tbody id="task-list"></tbody>
+      </table>
+    </section>
+    <section class="commands">
+      <h2>Docker commands</h2>
+      <pre>docker compose up --build -d
+docker compose ps
+docker compose logs -f
+docker compose down</pre>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
