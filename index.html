@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>楊莉思 — Software Engineering Homework</title>
+  <style>
+    :root{--bg:#f5f5f4;--paper:#fff;--ink:#292524;--muted:#78716c;--line:#d6d3d1;--green:#365314}
+    *{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--bg);font:15px/1.5 "Noto Sans TC",sans-serif}
+    header{padding:32px max(22px,calc((100vw - 880px)/2));color:#fff;background:#26351f}h1{margin:0 0 4px;font-size:26px}header p{margin:0;color:#dce6d5}
+    main{max-width:880px;margin:auto;padding:28px 22px}.projects{border:1px solid var(--line);background:var(--paper)}article{display:grid;grid-template-columns:70px 1fr auto;align-items:center;gap:16px;padding:18px;border-bottom:1px solid var(--line)}article:last-child{border-bottom:0}article>b{color:var(--green);font-size:17px}h2{margin:0 0 3px;font-size:18px}article p{margin:0;color:var(--muted)}.links{display:flex;gap:7px}a{padding:7px 10px;border:1px solid var(--green);color:var(--green);background:#fff;text-decoration:none}a.open{color:#fff;background:var(--green)}
+    @media(max-width:620px){article{grid-template-columns:1fr}.links{flex-wrap:wrap}}
+  </style>
+</head>
+<body>
+  <header><h1>楊莉思 · 111210555</h1><p>Modern Software Engineering Homework</p></header>
+  <main>
+    <section class="projects">
+      <article><b>HW1</b><div><h2>QuickCurl</h2><p>Python command-line HTTP client.</p></div><div class="links"><a href="hw1/main.py">Source</a><a href="hw1/README.md">Readme</a></div></article>
+      <article><b>HW2</b><div><h2>CourseDesk</h2><p>Course registration, credit calculation, and timetable.</p></div><div class="links"><a class="open" href="hw2/index.html">Open</a><a href="hw2/README.md">Readme</a></div></article>
+      <article><b>HW3</b><div><h2>PocketLedger</h2><p>Personal budget tracker with CSV export.</p></div><div class="links"><a class="open" href="hw3/index.html">Open</a><a href="hw3/README.md">Readme</a></div></article>
+    </section>
+  </main>
+</body>
+</html>

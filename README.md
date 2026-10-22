@@ -1,9 +1,12 @@
-# 課程：現代軟體工程 -- 學生作業與專案
+# Modern Software Engineering Homework
 
-欄位 | 內容
------|--------
-學期 | 115 學年上學期
-教師 | [陳鍾誠](https://www.nqu.edu.tw/educsie/index.php?act=blog&code=list&ids=4)
-學校 | [金門大學資訊工程系](https://www.nqu.edu.tw/educsie/index.php)
-學生 | 楊莉思
-學號 | 111210555
+Student: 楊莉思  
+Student ID: 111210555
+
+Website: https://cindycallista.github.io/_se/
+
+| Folder | Project | Open |
+| --- | --- | --- |
+| `hw1` | QuickCurl command-line HTTP client | [Source](https://github.com/cindycallista/_se/tree/main/hw1) |
+| `hw2` | CourseDesk academic portal | [Live Demo](https://cindycallista.github.io/_se/hw2/) |
+| `hw3` | PocketLedger budget tracker | [Live Demo](https://cindycallista.github.io/_se/hw3/) |
