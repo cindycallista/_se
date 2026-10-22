@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PocketLedger</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <strong>PocketLedger</strong>
+      <span>Personal budget tracker</span>
+    </div>
+    <span>楊莉思 · 111210555</span>
+  </header>
+
+  <main>
+    <section class="balance-panel">
+      <div><span>Current balance</span><b id="balance">NT$0</b></div>
+      <div><span>Total income</span><b id="income">NT$0</b></div>
+      <div><span>Total expenses</span><b id="expense">NT$0</b></div>
+      <div class="budget-control">
+        <label for="budget">Monthly budget</label>
+        <input id="budget" type="number" min="0" step="100" value="10000">
+      </div>
+    </section>
+
+    <p id="budget-message" class="budget-message"></p>
+
+    <div class="workspace">
+      <section class="ledger">
+        <div class="section-heading">
+          <h1>Transactions</h1>
+          <select id="filter" aria-label="Filter transactions">
+            <option value="all">All transactions</option>
+            <option value="income">Income only</option>
+            <option value="expense">Expenses only</option>
+          </select>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Date</th><th>Description</th><th>Category</th><th>Amount</th><th></th></tr></thead>
+            <tbody id="transaction-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside>
+        <h2>Add transaction</h2>
+        <form id="transaction-form">
+          <label>Type<select id="type"><option value="expense">Expense</option><option value="income">Income</option></select></label>
+          <label>Description<input id="description" maxlength="60" required placeholder="Lunch, salary, transport..."></label>
+          <label>Category<select id="category"><option>Food</option><option>Transport</option><option>Study</option><option>Housing</option><option>Income</option><option>Other</option></select></label>
+          <label>Amount<input id="amount" type="number" min="1" step="1" required></label>
+          <label>Date<input id="date" type="date" required></label>
+          <button type="submit">Save transaction</button>
+        </form>
+        <button id="export" class="plain-button">Export CSV</button>
+      </aside>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
+
