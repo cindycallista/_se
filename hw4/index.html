@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GitFlow Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="../">← Homework index</a>
+    <span>楊莉思 · 111210555</span>
+  </header>
+  <main>
+    <section class="intro">
+      <h1>GitFlow Lab</h1>
+      <p>A compact record of the branch, merge, fork, and pull-request workflow used in class.</p>
+    </section>
+    <nav class="steps" aria-label="Workflow steps">
+      <button class="active" data-step="branch">1. Branch</button>
+      <button data-step="merge">2. Merge</button>
+      <button data-step="fork">3. Fork</button>
+      <button data-step="pr">4. Pull request</button>
+    </nav>
+    <section class="workspace">
+      <div class="diagram" aria-label="Git workflow diagram">
+        <div class="lane"><strong>Upstream</strong><span>ccc115a/_se</span></div>
+        <div class="line"></div>
+        <div class="lane"><strong>Fork</strong><span>cindycallista/_se</span></div>
+        <div class="line"></div>
+        <div class="lane"><strong>Branch</strong><span>feature/git-workflow-notes</span></div>
+      </div>
+      <article>
+        <p class="number" id="step-number">Step 1</p>
+        <h2 id="step-title">Create a branch</h2>
+        <p id="step-purpose"></p>
+        <pre><code id="step-command"></code></pre>
+        <button id="copy-command">Copy commands</button>
+        <p class="check" id="step-check"></p>
+      </article>
+    </section>
+    <section class="comparison">
+      <h2>Workflow choice</h2>
+      <table>
+        <thead><tr><th>Model</th><th>Structure</th><th>Use here</th></tr></thead>
+        <tbody>
+          <tr><td>Git Flow</td><td>main, develop, feature, release, hotfix</td><td>No</td></tr>
+          <tr><td>GitHub Flow</td><td>main plus short-lived branches</td><td>Yes</td></tr>
+          <tr><td>Fork and Pull</td><td>personal fork proposes changes upstream</td><td>Yes</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
