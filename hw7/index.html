@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FixTrack · HW7</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="../">← Homework</a>
+    <strong>FixTrack</strong>
+    <span>楊莉思 / 111210555</span>
+  </header>
+  <main>
+    <section class="title-row">
+      <div>
+        <h1>Dorm repair requests</h1>
+        <p>Report a problem, keep urgent work visible, and close it after repair.</p>
+      </div>
+      <p id="mode" class="mode">Connecting…</p>
+    </section>
+
+    <div class="workspace">
+      <form id="ticketForm">
+        <h2>New request</h2>
+        <label for="reporter">Reported by</label>
+        <input id="reporter" name="reporter" required minlength="2" maxlength="60" placeholder="Resident name">
+
+        <label for="area">Location</label>
+        <select id="area" name="area">
+          <option>Kitchen</option>
+          <option>Bathroom</option>
+          <option>Hallway</option>
+          <option>Bedroom</option>
+          <option>Utility</option>
+        </select>
+
+        <label for="priority">Priority</label>
+        <select id="priority" name="priority">
+          <option value="low">Low</option>
+          <option value="normal" selected>Normal</option>
+          <option value="urgent">Urgent</option>
+        </select>
+
+        <label for="summary">Problem</label>
+        <textarea id="summary" name="summary" required minlength="5" maxlength="120" rows="4" placeholder="Describe what needs repair"></textarea>
+        <button type="submit">Submit request</button>
+        <p id="message" role="status"></p>
+      </form>
+
+      <section class="queue" aria-labelledby="queueTitle">
+        <div class="queue-header">
+          <div><h2 id="queueTitle">Work queue</h2><p id="openCount">0 open requests</p></div>
+          <label for="view">Show
+            <select id="view"><option value="all">All</option><option value="open">Open</option><option value="resolved">Resolved</option></select>
+          </label>
+        </div>
+        <div id="ticketList"></div>
+        <p id="empty" class="empty">No repair request matches this view.</p>
+      </section>
+    </div>
+
+    <section class="test-guide">
+      <h2>How this project is checked</h2>
+      <ol>
+        <li><b>Python unit tests</b> verify input rules, sorting, and state changes.</li>
+        <li><b>API system tests</b> start the WSGI server and send real HTTP requests.</li>
+        <li><b>Playwright</b> completes and resolves a request in a headless browser.</li>
+      </ol>
+      <a href="https://github.com/cindycallista/_se/tree/main/hw7/tests">Open test files</a>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

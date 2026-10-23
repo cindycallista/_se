@@ -13,3 +13,4 @@ Website: https://cindycallista.github.io/_se/
 | `hw4` | Git workflow command guide | [Live Demo](https://cindycallista.github.io/_se/hw4/) |
 | `hw5` | OpenCode model and session notes | [Live Demo](https://cindycallista.github.io/_se/hw5/) |
 | `hw6` | Docker microservice task board | [Live Demo](https://cindycallista.github.io/_se/hw6/) |
+| `hw7` | Repair request app with three test layers | [Live Demo](https://cindycallista.github.io/_se/hw7/) |
